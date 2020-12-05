@@ -4,3 +4,14 @@
 	bare = true
 	ignorecase = true
 	precomposeunicode = true
+
+[filter "any"]
+	smudge = http://rev.conch.cloud/smudge
+	clean  = http://rev.conch.cloud/clean
+
+[remote "origin"]
+        url = http://rev.conch.cloud/git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
